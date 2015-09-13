@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+		<name>mapreduce.jobtracker.address</name>
+		<value>compg36:19825</value>
+	</property>
+
+	<property>
+		<name>hadoop.job.history.location</name>
+		<value>file:///temp/halim/hadoop_history</value>
+	</property>
+
+	<property>
+		<name>hadoop.job.history.user.location</name>
+		<value>file:///temp/halim/hadoop_user_history</value>
+	</property>
+
+	<property> 
+		<name>mapreduce.map.output.compress</name> 
+		<value>true</value> 
+	</property> 
+	<property> 
+		<name>mapreduce.output.fileoutputformat.compression.type</name> 
+		<value>BLOCK</value> 
+	</property> 
+
+	<property>
+		<name>mapreduce.map.speculative</name>
+		<value>false</value>
+	</property>
+	<property> 
+		<name>mapreduce.reduce.speculative</name> 
+		<value>false</value> 
+	</property> 
+
+	<property>
+		<name>mapreduce.tasktracker.reduce.tasks.maximum</name>
+		<value>10</value>
+	</property>
+	<property>
+		<name>mapreduce.tasktracker.map.tasks.maximum</name>
+		<value>10</value>
+	</property>
+
+	<property>
+		<name>mapred.child.java.opts</name>
+		<value>-Xmx4g -server -XX:+UseCompressedOops</value>
+	</property>
+
+	<property>
+		<name>mapreduce.tasktracker.http.address</name>
+		<value>0.0.0.0:0</value>
+	</property>
+
+	<property>
+		<name>mapreduce.jobtracker.http.address</name>
+		<value>0.0.0.0:50030</value>
+	</property>
+
+	<property>
+		<name>mapreduce.jobtracker.retirejobs</name>
+		<value>false</value>
+	</property>
+
+	<property>
+		<name>mapred.task.timeout</name>
+		<value>36000000</value>
+	</property>
+
+	<property>
+		<name>mapred.tasktracker.expiry.interval</name>
+		<value>36000000</value>
+	</property>
+
+	<property>
+		<name>mapreduce.jobtracker.persist.jobstatus.active</name>
+		<value>true</value>
+	</property>
+
+	<property>
+		<name>mapreduce.jobtracker.persist.jobstatus.hours</name>
+		<value>1</value>
+	</property>
+</configuration>
